@@ -1,0 +1,42 @@
+
+  <body>
+    <a href="#">button</a>
+    
+    <script>
+     
+     // ever <a> on page //
+     const buttons = document.querySelectorAll("a");
+     
+      // for every <a> present in page
+      buttons.forEach((e) => {
+        
+        // click function trigered  here // 
+        e.addEventListener("click", function (e) {
+        
+        // Getting position on X axis
+        let x = e.clientX - e.target.offsetLeft;
+        
+        // Getting position on Y axis
+        let y = e.clientY - e.target.offsetTop;
+        
+        // creates new span element inside button //
+        let ripple = document.createElement("span");
+        
+        // span is set to absolute thats why we need to five left and top position values //
+        ripple.style.left = x + "px";
+        ripple.style.top = y + "px";
+        
+        // append ripple inside button //
+        this.append(ripple); 
+        
+        // remove effect after 500 mili seconds //
+        setTimeout(() => {
+          ripple.remove();
+         }, 500);
+        
+       });
+     });
+
+
+    </script>
+  </body>
