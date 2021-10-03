@@ -6,7 +6,7 @@
 body {
   height: 100vh;
   display: grid;place-items:center;
-  background-color: #000;
+  background-color: #1c1c25;
 }
 a {
   font-family: 'Poppins', sans-serif;
